@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
-    <header class="jumbotron-fluid bg-dark text-white text-center">
+    <header>
         <div class="container">
             <h1 class="page_title">Weather Dashboard</h1>
         </div>
@@ -22,27 +23,18 @@
 
                 <!-- Beginning of the section that holds the search bar -->
                 <div class="column" id="search_bar_container">
-                    <h2>Column 1</h2>
-                    <p>Some text..</p>
-                    <p>Some text..</p>
-                    <p>Some text..</p>
-                    <p>Some text..</p>
-                    <p>Some text..</p>
-                    <p>Some text..</p>
-                    <p>Some text..</p>
-                    <p>Some text..</p>
-                    <p>Some text..</p>
-                    <p>Some text..</p>
-                    <p>Some text..</p>
-                    <p>Some text..</p>
-                    <p>Some text..</p>
-                    <p>Some text..</p>
-                    <p>Some text..</p>
-                    <p>Some text..</p>
-                    <p>Some text..</p>
-                    <p>Some text..</p>
-                    <p>Some text..</p>
-                    <p>Some text..</p>
+                    <form class="search_location" action="action_page.php">
+                        <input type="text" placeholder="Search Location" name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                      </form>
+                <!-- Beginning of the section that holds the search history -->   
+
+                <div class="search_history">
+                    <ul class="city_searched" id="searched_location">
+                        <li class="searched_location_list"></li>
+                    </ul>
+                </div>
+    
                 </div>
 
                 <!-- Beginning of the section that holds the weathe reports -->
