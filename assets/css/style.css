@@ -1,11 +1,14 @@
 * {
     box-sizing: border-box;
 }
+
 :root {
-    --first_choice: #44e9ff;
+    --first_choice: #33cae4;
     --second_choice: #497980;
     --third_choice: rgb(192, 246, 253);
-    --fourth_choice: #333;
+    --fourth_choice: rgb(234, 225, 225);
+    --fourth_choice: rgb(154, 150, 150);
+    --fifth_choice: #95dcff;
     font-size: 62%;
 }
 
@@ -19,6 +22,7 @@ body {
     flex-direction: column;
 }
 
+/* Adding styling to the header section */
 header {
     background: var(--second_choice);
     padding: 30px 25px;
@@ -32,6 +36,7 @@ header {
     font-size: 4em;
 }
 
+/* Adding styling to the main section */
 .page_content {
     flex: 1;
     display: flex;
@@ -40,6 +45,7 @@ header {
     margin: 25px auto;
     width: 97%;
 }
+
 .weather_report_container {
     flex: 1;
     margin: 0 20px 20px;
@@ -51,96 +57,135 @@ header {
     height: calc(100% - 76%);
     background: #8ee6f4;
     border-radius: 12px;
-    border: 2px solid var(--fourth_choice);
+    border: 2px solid var(--fifth);
 
 }
 
+.flex-container {
+    display: inline;
+    background-color: #290f99;
+    width: 100px;
+    height: auto;
+    text-align: left;
 
-/* Create two columns that floats next to each other */
+}
+
+/* Create two columns that floats next to each other that holds the search bar and section that holds the report*/
 .column {
     float: left;
     width: 50%;
-    padding: 10px;
     height: 500px;
+    padding: 10px;
     overflow: auto;
-  }
-
- #search_bar_container {
-    float: left;
-      margin: 10px 10px 10px 10px;
-      width: 150px; 
-      overflow: auto;
-  }
-  
-#general_report_container {
-margin: 10px 10px 10px 10px;
 }
 
-  /* Clear floats after the columns */
-  .weather_report_container:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+/* Adding styling to the search bar */
+#search_bar_container {
+    border: 1px solid grey;
+    background: var(--fifth_choice);
+    border-radius: 2px;
+    float: left;
+    margin: 10px 10px 10px 10px;
+    width: 150px;
+    overflow: auto;
+}
 
-  .flex-container {
-      display: inline;
-    background-color: #290f99;
-    width: 100px;
+/* Adding styling to the section that holds the weather report */
+#general_report_container {
+    margin: 10px 10px 10px 10px;
+    border: 1px solid var(--fourth_choice);
+    border-radius: 2px;
+}
 
-    text-align: left;
-    line-height: 75px;
-    font-size: 30px;
-  } 
+/* Adding styling to the section that holds yoday's weather report */
+  #today_weather_report_box .date{
+    align-items:left;
+    margin-right: 0;
+    text-decoration: underline;
+}
 
-  #daily_report_box {
-      padding: 10px;
-  }
+#today_weather_report_box {
+    align-items: left;
+    padding: 10px;
+}
 
-  #weekly_report_container{
-      margin: 10px;
-      width: 50%;
-  }
-  .weekly_list_container {
+#today_weather_report_container {
+    color: black;
+    margin: 10px 0 10px 0;
+    padding: 0 20px 0 5px;
+    width: 100%;
+    border-bottom: 1px solid var(--fourth_choice);
+
+}
+/* Adding styling to the section that holds the weekly weather forcast report */
+#weekly_report_container h2 {
+    color: #000000;
+    margin-left: 15px;
+    margin-bottom: 2px;
+}
+
+.weekly_list_container {
     display: flex;
     flex-wrap: wrap;
-    background-color: DodgerBlue;
+    content: counter();
 
-  }
-  
- .weekly_list_container > div {
-    background-color: #f1f1f1;
-    width: 100px;
-    margin: 10px;
-    line-height: 75px;
-    font-size: 30px;
-  }
-  
-  #daily_report_container {
-      margin: 10px 10px 10px 10px;
-      width: 100%;
-      background: #d2d5dd;
-  }
+}
 
-  @media screen and (max-width: 980px) {
+.weekly_list_container {
+    align-items: center;
+}
+
+.weekly_list_container>div {
+    color: white;
+    background-color: #277ff2;
+    width: 150px;
+    height: 100px;
+    margin: 15px;
+}
+
+.report_container_box .date {
+    margin: 10px 0 15px 0;
+    text-align: center;
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.report_container p {
+    text-align: left;
+    margin-left: 10px;
+}
+
+
+
+/* Applying media query to create different layouts depending on the size of the viewport make */
+@media screen and (max-width: 600px) {
     #search_bar_container {
-      width: 100%;
-      height: 100px;
-      overflow: scroll;
-      flex-basis: 100%;
-      overflow:scroll;
+        width: 100%;
+        height: 100px;
+        overflow: scroll;
+        flex-basis: 100%;
+        overflow: scroll;
     }
 
     .column {
         width: 100%;
-      }
+    }
 
-    .report_container{
+    .report_container {
         flex: 100%;
         margin: 0;
     }
 
-    #weekly_report_container{
+    #weekly_report_container {
         width: 100%;
     }
-  }
+
+    .weekly_list_container {
+        align-items: center;
+    }
+
+    .report_container_box {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+}
