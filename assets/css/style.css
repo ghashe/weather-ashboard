@@ -148,8 +148,8 @@ form.search_location input[type=text] {
   #today_weather_report_box .date_box{
     align-items:left;
     margin-right: 0;
-    text-decoration: underline;
-    font-size: 2em;
+    border-bottom: 1px solid rgb(167, 163, 163);
+    font-size: 1.4em;
 }
 
 #today_weather_report_box {

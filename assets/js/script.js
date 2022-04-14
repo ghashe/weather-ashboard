@@ -4,8 +4,8 @@ const key = "fe19897d62524787142ce36a5083a059";
 
 // Time format
 function day_format(date) {
-  const date = new Date();
-  console.log(date);
+  const date1 = new Date();
+  console.log(date1);
   const month = date.getMonth() + 1;
   var day = date.getDate();
 
@@ -36,3 +36,20 @@ function display_location() {
   localStorage.setItem("locations", JSON.stringify(locations));
   console.log(localStorage);
 }
+
+var currentDate =
+  moment().format("dddd") + " " + moment().format("Do MMM YYYY");
+var presentHour = moment().format("h:mm:ss a");
+
+// The date and the time
+var interval = setInterval(function () {
+  var thisHour = moment();
+  $("#currentDay").html(
+    thisHour.format("YYYY MMMM DD") +
+      " " +
+      thisHour.format("dddd").substring(0, 3).toUpperCase()
+  );
+  $("#currentDay").html(
+    currentDate + " " + thisHour.format("hh:mm:ss A") + " " + "Weather"
+  );
+}, 100);
