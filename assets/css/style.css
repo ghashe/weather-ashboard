@@ -130,13 +130,36 @@ form.search_location input[type=text] {
 
   /* Adding styling to the section histry that holds the searched locations */
   .search_history {
-      margin-top: 10px;
+    color: #000000;
+    font-size: 1.6em;
+    margin-top: 10px;
     width: auto;
     height: auto;
-    border: 1px solid var(--second_choice);
+    /* border: 1px solid var(--second_choice); */
     border-end-end-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-bottom-left-radius: 5px;   
+
   }
+  
+  .search_history ul {
+    padding-left: 5px;
+    padding-right: 5px;
+    list-style-type: none;
+}
+
+  .search_history li{
+    height: 30px;
+    margin: 5px 0;
+    padding: 5px 0 0 20px ;
+    cursor: pointer;
+}
+
+   .search_history li:hover{
+     border: 1px solid var(--second_choice);
+     border-radius: 5spx;
+     background: #6aadeb;
+ }
+
 /* Adding styling to the section that holds the weather report */
 #general_report_container {
     margin: 10px 10px 10px 10px;
