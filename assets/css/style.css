@@ -168,6 +168,19 @@ form.search_location input[type=text] {
 }
 
 /* Adding styling to the section that holds yoday's weather report */
+
+#todays_date {
+    color: rgb(40, 54, 52);
+    margin-left: 20px;
+    font-size: 2em;
+}
+
+
+#today_weather_report_container h3 {
+    color: black;
+    margin-left: 10px;
+    font-size: 2em;
+}
   #today_weather_report_box .date_box{
     align-items:left;
     margin-right: 0;
@@ -185,7 +198,7 @@ form.search_location input[type=text] {
     color: rgb(0, 0, 0);
     font-size: 1.5em;
     margin: 10px 0 10px 0;
-    padding: 0 20px 0 5px;
+    padding: 0 20px 0 30px;
     width: 100%;
     border: 1px solid var(--first_choice);
     border-radius: 15px;
@@ -220,17 +233,23 @@ form.search_location input[type=text] {
     color: rgb(255, 255, 255);
     background-color: #000000;
     width: 200px;
-    height: 150px;
+    height: 200px;
     margin: 15px;
     border-radius: 15px;
 }
 
-.report_container_box .date {
+.report_container_box h6 {
     margin: 15px;
     text-align: center;
     border-bottom: 1px solid rgb(255, 255, 255);
-    font-size: 1.5em;
-    
+    font-size: 1.5em; 
+}
+
+.report_container_box img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;    
 }
 
 .report_container p {
@@ -239,11 +258,23 @@ form.search_location input[type=text] {
     opacity: 10;
     font-size: 1.4em;
 }
+.report_container p:last-child {
+    margin-bottom: 30px;
+}
 
 
 
 /* Applying media query to create different layouts depending on the size of the viewport make */
 @media screen and (max-width: 700px) {
+
+    header {
+        margin-top: 0;
+        padding: 5px;
+    }
+    .container h1{
+        text-align: center;
+        font-size: 3em;
+    }
     #search_bar_container {
         width: 100%;
         height: 45px;
@@ -271,10 +302,4 @@ form.search_location input[type=text] {
     .weekly_list_container {
         align-items: center;
     }
-
-    .report_container_box {
-        margin-left: 0;
-        margin-right: 0;
-    }
-
 }
