@@ -87,7 +87,7 @@ function fetch_weather_report(location_name) {
     url: URL,
     method: "GET",
   }).then(function (response) {
-    location_title = $("<h3>").text(response.name);
+    location_title = $("<h3>").text("Location:  " + response.name);
     $("#today_weather_report_container").append(location_title);
 
     var get_tempeture_number = parseInt((response.main.temp * 9) / 5 - 459);
@@ -140,6 +140,13 @@ function fetch_weather_report(location_name) {
           forecast_response.list[index_1].dt !=
           forecast_response.list[index_1 + 1].dt
         ) {
+          var forcast_div_title = $("<div>");
+          var forcast_weather_title_text = "6 Days Weather Forcast";
+          var forcast_weather_title = $("<h2>").text(
+            forcast_weather_title_text
+          );
+          forcast_div_title.append(forcast_weather_title);
+
           var forcast_div = $("<div>");
           forcast_div.attr("class", "report_container_box");
           var d = new Date(0);
@@ -177,6 +184,7 @@ function fetch_weather_report(location_name) {
               "https://img.icons8.com/color/48/000000/rain.png"
             );
           }
+
           var projected_temperature_k =
             forecast_response.list[index_1].main.temp;
           console.log(weather_condition);

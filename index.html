@@ -13,12 +13,13 @@
 <body>
     <header>
         <div class="container">
-            <h1 class="page_title">Weather Dashboard</h1>
-  
+            <h1 class="page_title">Weather App</h1>
+
         </div>
     </header>
 
-    <min class="page_content">
+    <main class="page_content">
+
         <section class="weather_report_container">
             <div class="report_list_container  report_container">
 
@@ -26,84 +27,50 @@
                 <div class="column" id="search_bar_container">
                     <form class="search_location" action="action_page.php">
                         <input type="text" id="input_value" placeholder="Search Location" name="search">
-                        <button 
-                        id="search_location_btn"
-                        type="submit"><i class="fa fa-search"></i></button>
-                      </form>
-                <!-- Beginning of the section that holds the search history -->   
+                        <button id="search_location_btn" type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                    <!-- Beginning of the section that holds the search history -->
 
-                <div class="search_history">
-                    <ul class="city_searched" id="searched_location">
-                        <!-- <li class="searched_location_list"></li> -->
-                    </ul>
-                </div>
-    
+                    <div class="search_history">
+                        <ul class="city_searched" id="searched_location">
+                            <!-- 
+                            The JavaScript display_locations function dynamically inserts 
+                            the locations that have been searched into this list
+                         -->
+                        </ul>
+                    </div>
+
                 </div>
 
-                <!-- Beginning of the section that holds the weathe reports -->
+                <!-- Beginning of the section that holds the weather reports -->
                 <div class="column report_container" id="general_report_container">
-                 
-                    <div id="todays_date"></div>
+
+                    <div id="todays_date">
+                        <!-- 
+                            The JavaScript setInterval function will insert today’s date here dynamically
+                        -->
+                    </div>
                     <div class="flex-container report_container">
 
                         <!-- This is the section that holds the current date wather report. -->
                         <div class="report_container" id="today_weather_report_container">
-                            
-                            <div id="today_weather_report_box">
-                                <div class="date_box" id="currentDay"></div>  
-                            </div>
-                            <h3>Location</h3>
-                            <P class="text">Tempeture: 57 °F</P>
-                            <P>Humidity: 62 %</P>
+
+                            <!-- 
+                                  By using the JavaScript fetch_weather_report function, today's 
+                                  weather report will be dynamically inserted here
+                             -->
+
                         </div>
                         <!-- This is the section that holds the weekly weather forcast -->
                         <div class="report_container" id="weekly_report_container">
                             <h2>6 Day Forcast</h2>
                             <div class="weekly_list_container report_container" id="weekly_list_container">
 
-                                <div class="report_container_box">
-                                    <div class="date"> 03/14/202 </div>
-                                    <P class="text">Tempeture: 57 °F</P>
-                                    <P>Humidity: 62 %</P>
-                                </div>
+                                <!-- 
+                                  By using the JavaScript fetch_weather_report function, a six-day 
+                                  weather forecast report will be dynamically inserted here
+                             -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-                                <!-- <div class="report_container_box">
-                                    <div class="date"> 03/14/202 </div>
-                                    <P class="text">Tempeture: 57 °F</P>
-                                    <P>Humidity: 62 %</P>
-                                </div>
-                                <div class="report_container_box">
-                                    <div class="date"> 03/14/202 </div>
-                                    <P class="text">Tempeture: 57 °F</P>
-                                    <P>Humidity: 62 %</P>
-                                </div>
-                                <div class="report_container_box">
-                                    <div class="date"> 03/14/202 </div>
-                                    <P class="text">Tempeture: 57 °F</P>
-                                    <P>Humidity: 62 %</P>
-                                </div>
-                                <div class="report_container_box">
-                                    <div class="date"> 03/14/202 </div>
-                                    <P class="text">Tempeture: 57 °F</P>
-                                    <P>Humidity: 62 %</P>
-                                </div>
-                                <div class="report_container_box">
-                                    <div class="date"> 03/14/202 </div>
-                                    <P class="text">Tempeture: 57 °F</P>
-                                    <P>Humidity: 62 %</P>
-                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -112,25 +79,19 @@
             </div>
             </div>
         </section>
-        </main>
+    </main>
 
-        <footer></footer>
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-        <script
-        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    <footer></footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"
-      ></script>
-
-
-      <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-      crossorigin="anonymous"
-    ></script>
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
