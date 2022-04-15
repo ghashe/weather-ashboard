@@ -60,7 +60,7 @@ header {
     background-position: 100% 100%;
     border-radius: 12px;
     border: 2px solid var(--fifth);
-
+    overflow: scroll;
 }
 
 .flex-container {
@@ -69,7 +69,6 @@ header {
     width: 100px;
     height: auto;
     text-align: left;
-
 }
 
 /* Create two columns that floats next to each other that holds the search bar and section that holds the report*/
@@ -225,10 +224,7 @@ form.search_location::after {
 .weekly_list_container {
     display: flex;
     flex-wrap: wrap;
-    content: counter();
-}
-
-.weekly_list_container {
+    content: counter();   
     align-items: center;
 }
 
