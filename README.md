@@ -1,3 +1,5 @@
+Weather Dashboard
+
 ## Contents
 
     1. About
@@ -10,7 +12,7 @@
     4. License
     5. Contributing
 
-## About
+## Abou
 
     Weather App that allows users to search for places and see current day weather as well as a six-day weather forecast with this simple and user-friendly weather application.
 
