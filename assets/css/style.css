@@ -175,6 +175,7 @@ form.search_location::after {
     color: rgb(0, 0, 0);
     margin-left: 20px;
     font-size: 2em;
+    text-align: center;
 }
 
 #today_weather_report_container h3 {
@@ -211,7 +212,6 @@ form.search_location::after {
 /* Adding styling to the section that holds the weekly weather forcast report */
 #weekly_report_container h2 {
     color: #000000;
-    margin: 0 0 0 20px;
     font-size: 2.6em;
     height: 40px;
     padding: 6px 10px 0 0;
@@ -219,6 +219,8 @@ form.search_location::after {
     border-top-right-radius: 10px;
     border-bottom: 1px solid var(--color_7);
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.3);
+
 }
 
 .weekly_list_container {
