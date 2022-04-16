@@ -135,7 +135,7 @@ function fetch_weather_report(location_name) {
       $("#weekly_list_container").empty();
       console.log(forecast_response);
       for (var index_1 = 0, index_2 = 0; index_2 <= 6; index_1 = index_1 + 7) {
-        var get_date = forecast_response.list[index_1].dt;
+        var get_date = forecast_response.list[index_1++].dt;
         if (
           forecast_response.list[index_1].dt !=
           forecast_response.list[index_1 + 1].dt

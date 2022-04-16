@@ -9,7 +9,6 @@
     --fourth_choice: rgb(234, 225, 225);
     --fourth_choice: rgb(154, 150, 150);
     --fifth_choice: #95dcff;
-
     font-size: 62%;
 }
 
@@ -173,7 +172,7 @@ form.search_location::after {
 /* Adding styling to the section that holds yoday's weather report */
 
 #todays_date {
-    color: rgb(40, 54, 52);
+    color: rgb(0, 0, 0);
     margin-left: 20px;
     font-size: 2em;
 }
@@ -212,13 +211,14 @@ form.search_location::after {
 /* Adding styling to the section that holds the weekly weather forcast report */
 #weekly_report_container h2 {
     color: #000000;
-    margin-left: 0px;
-    margin-bottom: 2px;
-    font-size: 2em;
-    background: rgb(180, 205, 210, .5);
+    margin: 0 0 0 20px;
+    font-size: 2.6em;
     height: 40px;
-    padding: 6px 0 0 40px;
-    border-radius: 5px;
+    padding: 6px 10px 0 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 1px solid var(--color_7);
+    text-align: center;
 }
 
 .weekly_list_container {
@@ -226,6 +226,7 @@ form.search_location::after {
     flex-wrap: wrap;
     content: counter();   
     align-items: center;
+    align-content: center;
 }
 
 .weekly_list_container>div {
@@ -235,6 +236,7 @@ form.search_location::after {
     height: 200px;
     margin: 15px;
     border-radius: 15px;
+
 }
 
 .report_container_box h6 {
@@ -250,7 +252,6 @@ form.search_location::after {
     margin-right: auto;
     width: 20%;
 }
-
 
 .report_container_box p{
 margin-bottom: 10px;
@@ -319,4 +320,9 @@ margin-bottom: 10px;
     .weekly_list_container {
         align-items: center;
     }
+
+    .weekly_list_container>div {
+        margin: 15px auto 15px auto;
+    }
+
 }
