@@ -42,7 +42,8 @@ Weather Dashboard
 
 ## Visuals:
 
-![](assets/images/weather_app_screenshot.png)
+![](assets/images/app_pc_screenshot.png)
+![](assets/images/app_mobile_screenshot.png)
 
 ## Build
 
@@ -50,13 +51,19 @@ Semantic tags have been used in HTML to create accessible content.
 The following tools are used to build the application
 
     • Open Weather API.
+         •  OpenWeatherMap is an online service, owned by OpenWeather Ltd, that provides global weather data via
+            API, including current weather data, forecasts, nowcasts and historical weather data for any
+            geographical location.
     • jQuery powers the dynamic rendering of the html content based on user input
     • Moment.js is utilized to extract historic data from APIs by manipulating date values
 
 ## Setup
 
-    Use the following link to clone the repo:
-    https://github.com/ghashe/weather-dashboard.git
+    •   Use the following link to clone the repo:
+        https://github.com/ghashe/weather-dashboard.git/
+
+    •   Use the following link to open it in your browser
+        https://ghashe.github.io/weather-dashboard/
 
 ## Credits
 
