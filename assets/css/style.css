@@ -1,330 +1,357 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 :root {
-    --first_choice: #33cae4;
-    --second_choice: #497980;
-    --third_choice: rgb(192, 246, 253);
-    --fourth_choice: rgb(234, 225, 225);
-    --fourth_choice: rgb(154, 150, 150);
-    --fifth_choice: #95dcff;
-    font-size: 62%;
+  --first_choice: #33cae4;
+  --second_choice: #497980;
+  --third_choice: rgb(192, 246, 253);
+  --fourth_choice: rgb(234, 225, 225);
+  --fourth_choice: rgb(154, 150, 150);
+  --fifth_choice: #95dcff;
+  font-size: 62%;
 }
 
 body {
-    background: rgb(255, 255, 255);
-    color: var(--fourth_choice);
-    margin: 0;
-    padding: 0;
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+  background: rgb(255, 255, 255);
+  color: var(--fourth_choice);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 /* Adding styling to the header section */
 header {
-    background: var(--second_choice);
-    padding: 30px 25px;
-    border-bottom: 5px solid var(--first_choice);
+  background: var(--second_choice);
+  padding: 30px 25px;
+  border-bottom: 5px solid var(--first_choice);
 }
 
 .page_title {
-    color: var(--first_choice);
-    margin: 0 0 0 50px;
-    font-size: 4em;
+  color: var(--first_choice);
+  margin: 0 0 0 50px;
+  font-size: 4em;
 }
 
 /* Adding styling to the main section */
 .page_content {
-    flex: 1;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 25px auto;
-    width: 97%;
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 25px auto;
+  width: 97%;
 }
 
 .weather_report_container {
-    flex: 1;
-    margin: 0 20px 20px;
-    height: 3000px;
+  flex: 1;
+  margin: 0 20px 20px;
+  height: 3000px;
 }
 
 .report_list_container {
-    padding: 15px;
-    height: calc(100% - 70%);
-    background: url(../images/ocean2.jpg);
-    background-size: cover;
-    background-position: 100% 100%;
-    border-radius: 12px;
-    border: 2px solid var(--fifth);
-    overflow: scroll;
+  padding: 15px;
+  height: calc(100% - 70%);
+  background: url(../images/ocean2.jpg);
+  background-size: cover;
+  background-position: 100% 100%;
+  border-radius: 12px;
+  border: 2px solid var(--fifth);
+  overflow: scroll;
 }
 
 .flex-container {
-    display: inline;
-    background-color: #290f99;
-    width: 100px;
-    height: auto;
-    text-align: left;
+  display: inline;
+  background-color: #290f99;
+  width: 100px;
+  height: auto;
+  text-align: left;
 }
 
 /* Create two columns that floats next to each other that holds the search bar and section that holds the report*/
 .column {
-    float: left;
-    width: 50%;
-    height: 700px;
-    padding: 10px;
-    overflow: auto;
+  float: left;
+  width: 50%;
+  height: 700px;
+  padding: 10px;
+  overflow: auto;
 }
 
 /* Adding styling to the search bar */
 #search_bar_container {
-    border: 1px solid rgb(133, 133, 133, .3);
-    background: rgb(173, 216, 230, .3);
-    border-radius: 2px;
-    float: left;
-    margin: 10px 10px 10px 10px;
-    width: 250px;
-    height: auto;
-    overflow: auto;
+  border: 1px solid rgb(133, 133, 133, 0.3);
+  background: rgb(173, 216, 230, 0.3);
+  border-radius: 2px;
+  float: left;
+  margin: 10px 10px 10px 10px;
+  width: 250px;
+  height: auto;
+  overflow: auto;
 }
 
 /* Style the search field */
-form.search_location input[type=text] {
-    padding: 10px;
-    font-size: 17px;
-    border: 1px solid grey;
-    float: left;
-    width: 80%;
-    background: #f1f1f1;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
+form.search_location input[type="text"] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
 
 /* Style the submit button */
 form.search_location button {
-    float: left;
-    width: 20%;
-    padding: 10px;
-    background: #2196F3;
-    color: white;
-    font-size: 17px;
-    border: 1px solid grey;
-    border-left: none;
-    /* Prevent double borders */
-    cursor: pointer;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196f3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  /* Prevent double borders */
+  cursor: pointer;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 form.search_location button:hover {
-    background: #0b7dda;
+  background: #0b7dda;
 }
 
 /* Clear floats */
 form.search_location::after {
-    content: "";
-    clear: both;
-    display: table;
+  content: "";
+  clear: both;
+  display: table;
 }
 
 /* Adding styling to the section histry that holds the searched locations */
 .search_history {
-    color: #000000;
-    font-size: 1.6em;
-    margin-top: 10px;
-    width: auto;
-    height: auto;
-    /* border: 1px solid var(--second_choice); */
-    border-end-end-radius: 5px;
-    border-bottom-left-radius: 5px;
+  color: #000000;
+  font-size: 1.6em;
+  margin-top: 10px;
+  width: auto;
+  height: auto;
+  /* border: 1px solid var(--second_choice); */
+  border-end-end-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 .search_history ul {
-    padding-left: 5px;
-    padding-right: 5px;
-    list-style-type: none;
+  padding-left: 5px;
+  padding-right: 5px;
+  list-style-type: none;
 }
 
 .search_history li {
-    height: 30px;
-    margin: 5px 0;
-    padding: 5px 0 0 20px;
-    cursor: pointer;
+  height: 30px;
+  margin: 5px 0;
+  padding: 5px 0 0 20px;
+  cursor: pointer;
 }
 
 .search_history li:hover {
-    border: 1px solid var(--second_choice);
-    border-radius: 5spx;
-    background: #6aadeb;
+  border: 1px solid var(--second_choice);
+  border-radius: 5spx;
+  background: #6aadeb;
 }
 
 /* Adding styling to the section that holds the weather report */
 #general_report_container {
-    margin: 10px 10px 10px 10px;
-    border: 1px solid var(--fourth_choice);
-    border-radius: 2px;
-    height: auto;
+  margin: 10px 10px 10px 10px;
+  border: 1px solid var(--fourth_choice);
+  border-radius: 2px;
+  height: auto;
 }
 
 /* Adding styling to the section that holds yoday's weather report */
 
 #todays_date {
-    color: rgb(0, 0, 0);
-    margin-left: 20px;
-    font-size: 2em;
-    text-align: center;
+  color: rgb(0, 0, 0);
+  margin-left: 20px;
+  font-size: 2em;
+  text-align: center;
 }
 
 #today_weather_report_container h3 {
-    color: black;
-    margin-left: 10px;
-    font-size: 2em;
-    line-height: 35px;
+  color: black;
+  margin-left: 10px;
+  font-size: 2em;
+  line-height: 35px;
 }
 
 #today_weather_report_box .date_box {
-    align-items: left;
-    margin-right: 0;
-    border-bottom: 1px solid rgb(167, 163, 163);
-    font-size: 1.4em;
+  align-items: left;
+  margin-right: 0;
+  border-bottom: 1px solid rgb(167, 163, 163);
+  font-size: 1.4em;
 }
 
 #today_weather_report_box {
-    align-items: left;
-    padding: 10px;
+  align-items: left;
+  padding: 10px;
 }
 
 #today_weather_report_container {
-    background: rgb(180, 205, 210, .8);
-    color: rgb(0, 0, 0);
-    font-size: 1.5em;
-    margin: 10px 0 10px 0;
-    padding: 0 20px 0 30px;
-    width: 100%;
-    border: 1px solid var(--first_choice);
-    border-radius: 15px;
-    line-height: 12px;
+  background: rgb(180, 205, 210, 0.8);
+  color: rgb(0, 0, 0);
+  font-size: 1.5em;
+  margin: 10px 0 10px 0;
+  padding: 0 20px 0 30px;
+  width: 100%;
+  border: 1px solid var(--first_choice);
+  border-radius: 15px;
+  line-height: 12px;
 }
 
 /* Adding styling to the section that holds the weekly weather forcast report */
 #weekly_report_container h2 {
-    color: #000000;
-    font-size: 2.6em;
-    height: 40px;
-    padding: 6px 10px 0 0;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom: 1px solid var(--color_7);
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.3);
-
+  color: #000000;
+  font-size: 2.6em;
+  height: 40px;
+  padding: 6px 10px 0 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom: 1px solid var(--color_7);
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .weekly_list_container {
-    display: flex;
-    flex-wrap: wrap;
-    content: counter();   
-    align-items: center;
-    align-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  content: counter();
+  align-items: center;
+  align-content: center;
 }
 
-.weekly_list_container>div {
-    color: rgb(255, 255, 255);
-    background-color: rgb(0, 0, 0, .6);
-    width: 200px;
-    height: 200px;
-    margin: 15px;
-    border-radius: 15px;
-
+.weekly_list_container > div {
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0, 0.6);
+  width: 200px;
+  height: 200px;
+  margin: 15px;
+  border-radius: 15px;
 }
 
 .report_container_box h6 {
-    margin: 15px;
-    text-align: center;
-    border-bottom: 1px solid rgb(255, 255, 255);
-    font-size: 1.5em;
+  margin: 15px;
+  text-align: center;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  font-size: 1.5em;
 }
 
 .report_container_box img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 20%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
 }
 
-.report_container_box p{
-margin-bottom: 10px;
+.report_container_box p {
+  margin-bottom: 10px;
 }
 
 .report_container p {
-    text-align: left;
-    margin-left: 10px;
-    opacity: 10;
-    font-size: 1.4em;
-    opacity: 2;
+  text-align: left;
+  margin-left: 10px;
+  opacity: 10;
+  font-size: 1.4em;
+  opacity: 2;
 }
 
 .report_container p:last-child {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
+/* Adding a color that indicates the UV index value of the location */
+
+/* If the UV index is greater than 0 and less than 2 then apply the background color green*/
+.green {
+  background-color: green;
+  border-radius: 8%
+}
+
+/*If the UV index is greater than 2 and less than 5 then apply the background color yellow*/
+.yellow {
+  background-color: yellow;
+  border-radius: 8%
+}
+
+/* If the UV index is greater than 5 and less than 7 then apply the background color orange*/
+.orange {
+  background-color: orange;
+  border-radius: 8%
+}
+
+/* If the UV index is greater than 7 and less than 10 then apply the background color red*/
+.red {
+  background-color: red;
+  border-radius: 8%
+}
+
+/* If the UV index is not between 0 and 10, then use purple as the background color*/
+.purple {
+  background-color: purple;
+  border-radius: 8%
+}
 /* Applying media query to create different layouts depending on the size of the viewport make */
 @media screen and (max-width: 700px) {
-    
-    header {
-        margin-top: 0;
-        padding: 5px;
-    }
+  header {
+    margin-top: 0;
+    padding: 5px;
+  }
 
-    .page_title {
-        color: var(--first_choice);
-        margin: 0;
-        font-size: 4em;
-    }
+  .page_title {
+    color: var(--first_choice);
+    margin: 0;
+    font-size: 4em;
+  }
 
-    .container h1 {
-        text-align: center;
-        font-size: 3em;
-    }
+  .container h1 {
+    text-align: center;
+    font-size: 3em;
+  }
 
-    #search_bar_container {
-        width: 100%;
-        height: 45px;
-        overflow: scroll;
-        flex-basis: 100%;
-        overflow: hidden;
-        background-color: white;
-        border: none;
-        padding: 0;
-    }
+  #search_bar_container {
+    width: 100%;
+    height: 45px;
+    overflow: scroll;
+    flex-basis: 100%;
+    overflow: hidden;
+    background-color: white;
+    border: none;
+    padding: 0;
+  }
 
-    .column {
-        width: 100%;
-    }
+  .column {
+    width: 100%;
+  }
 
-    .report_container {
-        flex: 100%;
-        margin: 0;
-    }
+  .report_container {
+    flex: 100%;
+    margin: 0;
+  }
 
-    #today_weather_report_container h3 {
-        font-size: 1.5em;
-        line-height: 25px;
-    }
+  #today_weather_report_container h3 {
+    font-size: 1.5em;
+    line-height: 25px;
+  }
 
-    #weekly_report_container {
-        width: 100%;
-    }
+  #weekly_report_container {
+    width: 100%;
+  }
 
-    .weekly_list_container {
-        align-items: center;
-    }
+  .weekly_list_container {
+    align-items: center;
+  }
 
-    .weekly_list_container>div {
-        margin: 15px auto 15px auto;
-    }
-
+  .weekly_list_container > div {
+    margin: 15px auto 15px auto;
+  }
 }

@@ -122,6 +122,17 @@ function fetch_weather_report(location_name) {
       location_uvp.append(location_uv);
       $("#today_weather_report_container").append(location_uvp);
       console.log(typeof responseuv.value);
+      if (responseuv.value > 0 && responseuv.value <= 2) {
+        location_uv.attr("class", "green");
+      } else if (responseuv.value > 2 && responseuv.value <= 5) {
+        location_uv.attr("class", "yellow");
+      } else if (responseuv.value > 5 && responseuv.value <= 7) {
+        location_uv.attr("class", "orange");
+      } else if (responseuv.value > 7 && responseuv.value <= 10) {
+        location_uv.attr("class", "red");
+      } else {
+        location_uv.attr("class", "purple");
+      }
     });
     var url_forecast =
       "https://api.openweathermap.org/data/2.5/forecast?q=" +
@@ -230,3 +241,5 @@ var interval = setInterval(function () {
     currentDate + " " + thisHour.format("hh:mm:ss A") + " " + "Weather"
   );
 }, 100);
+
+// ti
